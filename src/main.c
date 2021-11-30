@@ -151,7 +151,7 @@ int main(int UNUSED argc, const char UNUSED * argv[]) {
 	eth2->h_proto = htons(ETHIPP);
 	int blk_number = 1;
 
-	send = fopen("spl", "rb");
+	send = fopen("/opt/bbblfs/spl", "rb");
 
 	if (send == NULL) {
 		perror("Cannot open spl binary");
@@ -284,7 +284,7 @@ int main(int UNUSED argc, const char UNUSED * argv[]) {
 	eth2->h_proto = htons(ETHIPP);
 
 	blk_number = 1;
-	send = fopen("uboot", "rb");
+	send = fopen("/opt/bbblfs/uboot", "rb");
 
 	if (send == NULL) {
 		perror("Cannot open uboot binary");
@@ -380,7 +380,7 @@ int main(int UNUSED argc, const char UNUSED * argv[]) {
 
 	eth2->h_proto = htons(ETHIPP);
 	blk_number = 1;
-	send = fopen("fit", "rb");
+	send = fopen("/opt/bbblfs/fit", "rb");
 
 	if (send == NULL) {
 		perror("Cannot open fit binary");
